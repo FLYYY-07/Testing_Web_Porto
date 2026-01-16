@@ -36,8 +36,8 @@ export default function RootLayout({
             <header className="h-screen w-1/4"></header>
             <section className="w-full h-inherit flex flex-col px-3">
               <Nav/>
+              {children}
             </section>
-            {children}
           </div>
         </div>
       </body>
