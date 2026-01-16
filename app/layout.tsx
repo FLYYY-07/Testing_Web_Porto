@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+import Nav from "@/components/nav";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -32,6 +34,9 @@ export default function RootLayout({
         <div className="min-h-screen mx-auto max-w-8xl px-10">
           <div className="min-h-screen mx-auto py-5 flex flex-row">
             <header className="h-screen w-1/4"></header>
+            <section className="w-full h-inherit flex flex-col px-3">
+              <Nav/>
+            </section>
             {children}
           </div>
         </div>

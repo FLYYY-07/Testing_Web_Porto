@@ -1,6 +1,10 @@
+'use client'
+
 const Nav = () => {
     return (
-        <div>ini buat nav bar</div>
+        <div className="w-full border-3 border-zinc-800">
+            tes
+        </div>
     )
 }
 
