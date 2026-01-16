@@ -1,5 +1,5 @@
-export default function Page(){
+export default function Achivements(){
     return(
-        <div>tes</div>
+        <div>Achivements</div>
     )
 }

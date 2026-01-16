@@ -1,5 +1,5 @@
-export default function Page(){
+export default function Dashboard(){
     return(
-        <div>tes</div>
+        <div>Dashboard</div>
     )
 }

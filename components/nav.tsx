@@ -3,3 +3,5 @@ const Nav = () => {
         <div>ini buat nav bar</div>
     )
 }
+
+export default Nav

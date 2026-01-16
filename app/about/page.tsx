@@ -1,5 +1,5 @@
-export default function Page(){
+export default function About(){
     return(
-        <div>tes tes tes </div>
+        <div>About</div>
     )
 }
