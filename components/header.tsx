@@ -2,7 +2,7 @@ export default function Header() {
   return (
     <div className="flex min-h-screen">
       {/* SIDEBAR (Yang temanmu sebut Header) */}
-      <aside className="w-64 bg-[#121212] text-white p-6 border-r border-gray-800 flex flex-col justify-between">
+      <aside className="w-64 bg-[#224 71.4% 4.1%] text-white p-6 flex flex-col justify-between">
         <div>
           {/* 1. Circle Photo dengan sedikit hiasan */}
           <div className="w-20 h-20 bg-gray-600 rounded-full mb-10 border-2 border-gray-500 shadow-lg"></div>
@@ -50,7 +50,7 @@ export default function Header() {
         </div>
 
         {/* 3. Copyright di bagian paling bawah */}
-        <div className="text-[10px] text-gray-500 mt-auto pt-10 border-t border-gray-800">
+        <div className="text-[10px] text-gray-500 mt-auto pb-85 pt-6 border-t border-gray-800/50">
           <p>COPYRIGHT © 2026</p>
           <p>Katharina. All rights reserved.</p>
         </div>
