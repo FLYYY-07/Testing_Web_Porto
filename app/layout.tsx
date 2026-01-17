@@ -22,7 +22,9 @@ export default function RootLayout({
       >
         <div className="min-h-screen mx-auto max-w-8xl px-10">
           <div className="min-h-screen mx-auto py-10 flex flex-row">
-            <header className="h-screen w-1/4"></header>
+            <header className="h-screen w-1/4">
+              <Header/>
+            </header>
             <section className="w-full h-inherit flex flex-col px-3">
               <Nav/>
               {children}
