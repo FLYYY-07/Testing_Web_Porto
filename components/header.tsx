@@ -1,29 +1,60 @@
 export default function Header() {
-    return (
-        <div className="flex min-h-screen">
-        {/* SIDEBAR (Yang temanmu sebut Header) */}
-        <aside className="w-64 bg-gray-100 p-10 border-r">
-            <div className="w-20 h-20 bg-gray-300 rounded-full mb-10"></div> {/* Circle Photo */}
-            <nav className="flex flex-col space-y-4">
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-            {/* Tombol sosmed lainnya */}
-            </nav>
-        </aside>
+  return (
+    <div className="flex min-h-screen">
+      {/* SIDEBAR (Yang temanmu sebut Header) */}
+      <aside className="w-64 bg-[#121212] text-white p-6 border-r border-gray-800 flex flex-col justify-between">
+        <div>
+          {/* 1. Circle Photo dengan sedikit hiasan */}
+          <div className="w-20 h-20 bg-gray-600 rounded-full mb-10 border-2 border-gray-500 shadow-lg"></div>
 
-        {/* BAGIAN KANAN */}
-        <div className="flex-1 flex flex-col">
-            {/* NAVBAR ATAS */}
-            <nav className="h-16 border-b flex items-center px-10 space-x-8">
-            <a href="#">Intro</a>
-            <a href="#">Project</a>
-            </nav>
+          {/* 2. Navigasi dengan Efek Hover */}
+          <nav className="flex flex-col space-y-2">
+            
+            {/* Contoh Link dengan Animasi */}
+            <a href="#" className="
+              flex items-center px-4 py-3 rounded-xl
+              bg-transparent transition-all duration-300 ease-in-out
+              hover:bg-white/10 hover:scale-105 active:scale-95
+              text-gray-400 hover:text-white group
+            ">
+              <span>About</span>
+            </a>
 
-            {/* ISI UTAMA */}
-            <main className="p-10">
-            <h1 className="text-4xl font-bold">Main Content Area</h1>
-            </main>
+            <a href="#" className="
+              flex items-center px-4 py-3 rounded-xl
+              bg-transparent transition-all duration-300 ease-in-out
+              hover:bg-white/10 hover:scale-105 active:scale-95
+              text-gray-400 hover:text-white
+            ">
+              <span>Git</span>
+            </a>
+
+            <a href="#" className="
+              flex items-center px-4 py-3 rounded-xl
+              bg-transparent transition-all duration-300 ease-in-out
+              hover:bg-white/10 hover:scale-105 active:scale-95
+              text-gray-400 hover:text-white
+            ">
+              <span>Social Media</span>
+            </a>
+
+            <a href="#" className="
+              flex items-center px-4 py-3 rounded-xl
+              bg-transparent transition-all duration-300 ease-in-out
+              hover:bg-white/10 hover:scale-105 active:scale-95
+              text-gray-400 hover:text-white
+            ">
+              <span>Contact</span>
+            </a>
+          </nav>
         </div>
+
+        {/* 3. Copyright di bagian paling bawah */}
+        <div className="text-[10px] text-gray-500 mt-auto pt-10 border-t border-gray-800">
+          <p>COPYRIGHT © 2026</p>
+          <p>Katharina. All rights reserved.</p>
         </div>
-    );
+      </aside>
+    </div>
+  );
 }
