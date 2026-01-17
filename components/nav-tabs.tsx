@@ -9,7 +9,10 @@ export default function Tabs({ref, label}: {ref: string, label: string}){
 
     return (
         <span className="flex-1">
-            <div className={`w-inherit h-inherit p-2 rounded-2xl ${isActive ? "bg-zinc-950" : ""}`}>
+            <div className={`
+                w-inherit h-inherit p-2 rounded-2xl
+                ${isActive ? "bg-zinc-950" : ""}
+            `}>
                 <Link href={ref} className="flex justify-center font-bold text-xs">{label}</Link>
             </div>
         </span>
