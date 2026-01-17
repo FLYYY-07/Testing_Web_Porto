@@ -1,4 +1,6 @@
-export default function SkillsIcons({ Icon, Background, SkillName } : { Icon: React.ElementType, Background: string, SkillName: string }){
+export default function SkillsIcons(
+    { Icon, Background, SkillName, Fore } : { Icon: React.ElementType, Background: string, SkillName: string, Fore: string }
+){
     return (
         <div className="group pr-2">
             <div className="relative size-22 flex justify-center items-center
@@ -10,14 +12,14 @@ export default function SkillsIcons({ Icon, Background, SkillName } : { Icon: Re
                     group-hover:translate-x-2/11
                     group-hover:-translate-y-3/11
                 `}></span>
-                <span className="absolute size-2/3 border border-gray-50 rounded-3xl flex justify-center items-center
+                <span className={`absolute size-2/3 border border-gray-300 rounded-3xl flex justify-center items-center
                     transition-transform
                     duration-200
                     ease-in-out
                     group-hover:scale-108
                     group-hover:translate-y-2
-                ">
-                    <Icon className="size-2/3"/>
+                `}>
+                    <Icon className={`size-2/3`} style={{ color: Fore }}/>
                 </span>
             </div>
             <span className="opacity-0 flex justify-center font-semibold
