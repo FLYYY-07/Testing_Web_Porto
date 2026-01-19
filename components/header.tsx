@@ -1,7 +1,13 @@
+import { GoArrowRight } from "react-icons/go";
+import { GoPerson } from "react-icons/go";
+import { AiFillGithub } from "react-icons/ai";
+import { GoPeople } from "react-icons/go";
+import { GoMail } from "react-icons/go";
+
 export default function Header() {
   return (
     <div className="flex min-h-screen">
-      {/* SIDEBAR (Yang temanmu sebut Header) */}
+      {/* SIDEBAR  */}
       <aside className="w-64 bg-[#224 71.4% 4.1%] text-white p-6 flex flex-col justify-between">
         <div>
           {/* 1. Circle Photo dengan sedikit hiasan */}
@@ -18,7 +24,9 @@ export default function Header() {
               hover:bg-white/10 hover:scale-105 active:scale-95
               text-gray-400 hover:text-white group
             ">
-              <span>About</span>
+              <GoPerson size={20}/> 
+              <span className="ml-1">About</span>
+              <GoArrowRight className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </a>
 
             <a href="#" className="
@@ -27,7 +35,9 @@ export default function Header() {
               hover:bg-white/10 hover:scale-105 active:scale-95
               text-gray-400 hover:text-white
             ">
-              <span>Git</span>
+              <AiFillGithub size={20} />
+              <span className="ml-1">Git</span>
+              <GoArrowRight className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </a>
 
             <a href="#" className="
@@ -36,7 +46,9 @@ export default function Header() {
               hover:bg-white/10 hover:scale-105 active:scale-95
               text-gray-400 hover:text-white
             ">
-              <span>Social Media</span>
+              <GoPeople size={20} />
+              <span className="ml-1">Social Media</span>
+              <GoArrowRight className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </a>
 
             <a href="#" className="
@@ -45,7 +57,9 @@ export default function Header() {
               hover:bg-white/10 hover:scale-105 active:scale-95
               text-gray-400 hover:text-white
             ">
-              <span>Contact</span>
+              <GoMail size={20} />
+              <span className="ml-1">Contact</span>
+              <GoArrowRight className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </a>
           </nav>
         </div>
