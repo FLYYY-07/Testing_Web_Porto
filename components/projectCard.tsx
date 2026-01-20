@@ -1,15 +1,17 @@
 'use client'
 import Image from "next/image";
-import { FaLongArrowAltRight } from "react-icons/fa";
+import Link from "next/link";
+import { GoArrowRight } from "react-icons/go";
 
-export default function ProjectCard(){
+export default function ProjectCard({ url } : { url: string}){
     return(
-        <div className="group w-90 h-90 flex flex-col  rounded-4xl relative overflow-hidden">
+        <Link href={url}
+            className="group w-90 h-90 flex flex-col  rounded-4xl relative overflow-hidden">
             <div className="w-full h-4/7 relative">
                 <Image src={`/test-gambar.png`} alt="vic3"
                     fill
                     style={{
-                        objectFit: 'cover', // Or 'contain' depending on your needs
+                        objectFit: 'cover',
                     }}
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-gray-950 via-gray-500/40 to-transparent
@@ -25,7 +27,7 @@ export default function ProjectCard(){
                         group-hover:opacity-100
                     ">
                         View Details 
-                        <FaLongArrowAltRight className="ml-5
+                        <GoArrowRight className="ml-5
                             transition-all
                             duration-500
                             ease-linear
@@ -47,6 +49,6 @@ export default function ProjectCard(){
                     </p>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }

@@ -1,8 +1,10 @@
-import { GoArrowRight } from "react-icons/go";
-import { GoPerson } from "react-icons/go";
+import { 
+  GoArrowRight,
+  GoPerson,
+  GoPeople,
+  GoMail
+} from "react-icons/go";
 import { AiFillGithub } from "react-icons/ai";
-import { GoPeople } from "react-icons/go";
-import { GoMail } from "react-icons/go";
 
 export default function Header() {
   return (
