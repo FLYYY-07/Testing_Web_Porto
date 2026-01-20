@@ -1,12 +1,14 @@
-import { GoArrowRight } from "react-icons/go";
-import { GoPerson } from "react-icons/go";
+import { 
+  GoArrowRight,
+  GoPerson,
+  GoPeople,
+  GoMail
+} from "react-icons/go";
 import { AiFillGithub } from "react-icons/ai";
-import { GoPeople } from "react-icons/go";
-import { GoMail } from "react-icons/go";
 
 export default function Header() {
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen fixed">
       {/* SIDEBAR  */}
       <aside className="w-64 bg-[#224 71.4% 4.1%] text-white p-6 flex flex-col justify-between">
         <div>
