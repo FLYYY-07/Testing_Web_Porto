@@ -67,7 +67,7 @@ export default function Header() {
         {/* 3. Copyright di bagian paling bawah */}
         <div className="text-[10px] text-gray-500 mt-auto pb-85 pt-6 border-t border-gray-800/50">
           <p>COPYRIGHT © 2026</p>
-          <p>Katharina. All rights reserved.</p>
+          <p>{"insert name"}. All rights reserved.</p>
         </div>
       </aside>
     </div>
