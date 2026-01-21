@@ -13,8 +13,9 @@ export default function Header() {
       <aside className="w-64 bg-[#224 71.4% 4.1%] text-white p-6 flex flex-col justify-between">
         <div>
           {/* 1. Circle Photo dengan sedikit hiasan */}
-          <div className="w-20 h-20 bg-gray-600 rounded-full mb-10 border-2 border-gray-500 shadow-lg animate-bounce"></div>
+          <div className="w-30 h-30 bg-gray-600 rounded-full mb-1 border-2 border-gray-500 shadow-lg animate-bounce" style={{alignItems: 'center'}}></div>
           <div style={{alignItems: 'left'}}></div>
+          <span className="text-2xl font-bold mb-20 block">My Portfolio</span>
 
           {/* 2. Navigasi dengan Efek Hover */}
           <nav className="flex flex-col space-y-2">
