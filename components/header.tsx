@@ -5,6 +5,7 @@ import {
   GoMail
 } from "react-icons/go";
 import { AiFillGithub } from "react-icons/ai";
+import { FcOk } from "react-icons/fc"; 
 
 export default function Header() {
   return (
@@ -15,7 +16,7 @@ export default function Header() {
           {/* 1. Circle Photo dengan sedikit hiasan */}
           <div className="w-30 h-30 bg-gray-600 rounded-full mb-1 border-2 border-gray-500 shadow-lg animate-bounce" style={{alignItems: 'center'}}></div>
           <div style={{alignItems: 'left'}}></div>
-          <span className="text-2xl font-bold mb-20 block">My Portfolio</span>
+          <span className="text-2xl font-bold mb-20 block">My Portfolio <FcOk className="color-blue"/></span>
 
           {/* 2. Navigasi dengan Efek Hover */}
           <nav className="flex flex-col space-y-2">
