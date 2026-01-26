@@ -3,12 +3,24 @@ import Image from "next/image";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
 
-export default function ProjectCard({ url } : { url: string}){
+export default function ProjectCard(
+{ 
+    url, 
+    img,
+    title,
+    desc 
+} : { 
+    url : string,
+    img : string,
+    title : string,
+    desc : string
+})
+{
     return(
         <Link href={url}
             className="group w-90 h-90 flex flex-col  rounded-4xl relative overflow-hidden">
             <div className="w-full h-4/7 relative">
-                <Image src={`/test-gambar.png`} alt="vic3"
+                <Image src={img} alt="vic3"
                     fill
                     style={{
                         objectFit: 'cover',
@@ -43,9 +55,9 @@ export default function ProjectCard({ url } : { url: string}){
                     ease-in-out
                     group-hover:pt-0
                 ">
-                    <span className="w-full font-bold text-lg">project_title</span>
+                    <span className="w-full font-bold text-lg">{title}</span>
                     <p className="my-2 text-sm text-left text-wrap line-clamp-3 ">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut tempor lorem. Donec accumsan, dolor nec euismod hendrerit, metus sem ultricies tortor, in aliquam orci dui id turpis. Etiam non mi hendrerit, gravida turpis id, ornare velit. Proin suscipit rhoncus bibendum. Duis lacinia justo et purus efficitur accumsan. Nunc ex augue, eleifend at interdum at, pulvinar nec justo. Morbi pellentesque lobortis augue, eget dapibus sem viverra sit amet. Vivamus at velit mollis, elementum odio eu, placerat ipsum. 
+                        {desc}     
                     </p>
                 </div>
             </div>

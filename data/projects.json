@@ -1,0 +1,53 @@
+{
+    "Web-Porto": {
+        "name": "Web Porto",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut tempor lorem. Donec accumsan, dolor nec euismod hendrerit, metus sem ultricies tortor, in aliquam orci dui id turpis. Etiam non mi hendrerit, gravida turpis id, ornare velit. Proin suscipit rhoncus bibendum. Duis lacinia justo et purus efficitur accumsan. Nunc ex augue, eleifend at interdum at, pulvinar nec justo. Morbi pellentesque lobortis augue, eget dapibus sem viverra sit amet. Vivamus at velit mollis, elementum odio eu, placerat ipsum.",
+        "timeOfCreation": "12-01-20",
+        "lastUpdated": "12-01-22",
+        "techStack": [
+            "NextJs",
+            "Tailwind",
+            "ReactIcons"
+        ],
+        "features":[
+            "porto"
+        ],
+        "imgUrl":[
+            "/test-gambar-2.png",
+            "/test-gambar.png"
+        ],
+        "siteUrl":"/"
+    },    
+    "sesuatu": {
+        "name": "sesuatu",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut tempor lorem. Donec accumsan, dolor nec euismod hendrerit, metus sem ultricies tortor, in aliquam orci dui id turpis. Etiam non mi hendrerit, gravida turpis id, ornare velit. Proin suscipit rhoncus bibendum. Duis lacinia justo et purus efficitur accumsan. Nunc ex augue, eleifend at interdum at, pulvinar nec justo. Morbi pellentesque lobortis augue, eget dapibus sem viverra sit amet. Vivamus at velit mollis, elementum odio eu, placerat ipsum.",
+        "timeOfCreation": "12-01-20",
+        "lastUpdated": "12-01-22",
+        "techStack": [
+            "NextJs",
+            "Tailwind",
+            "ReactIcons"
+        ],
+        "features":[
+            "porto"
+        ],
+        "imgUrl":["/test-gambar.png"],
+        "siteUrl":"/"
+    }, 
+    "sawit": {
+        "name": "sawit",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut tempor lorem. Donec accumsan, dolor nec euismod hendrerit, metus sem ultricies tortor, in aliquam orci dui id turpis. Etiam non mi hendrerit, gravida turpis id, ornare velit. Proin suscipit rhoncus bibendum. Duis lacinia justo et purus efficitur accumsan. Nunc ex augue, eleifend at interdum at, pulvinar nec justo. Morbi pellentesque lobortis augue, eget dapibus sem viverra sit amet. Vivamus at velit mollis, elementum odio eu, placerat ipsum.",
+        "timeOfCreation": "12-01-20",
+        "lastUpdated": "12-01-22",
+        "techStack": [
+            "NextJs",
+            "Tailwind",
+            "ReactIcons"
+        ],
+        "features":[
+            "porto"
+        ],
+        "imgUrl":["/test-gambar.png"],
+        "siteUrl":"/"
+    }
+}
