@@ -18,8 +18,8 @@ export default function ProjectCard(
 {
     return(
         <Link href={url}
-            className="group w-90 h-90 flex flex-col  rounded-4xl relative overflow-hidden">
-            <div className="w-full h-4/7 relative">
+            className="group relative w-90 h-90 flex flex-col rounded-4xl overflow-hidden">
+            <div className="relative w-full h-4/7 ">
                 <Image src={img} alt="vic3"
                     fill
                     style={{

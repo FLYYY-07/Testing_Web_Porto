@@ -1,0 +1,23 @@
+{
+    "certificate-google":{
+        "title": "Sertifikat Nyawit",
+        "obtained": "20-12-1999",
+        "organization": "AntekAsing",
+        "organizationLogo": "/certif-logo.png",
+        "certificateImg":"/test-gambar.png"
+    },
+    "certificate-aws":{
+        "title": "Sertifikat Nyawit",
+        "obtained": "20-12-1999",
+        "organization": "AntekAsing",
+        "organizationLogo": "/certif-logo.png",
+        "certificateImg":"/test-gambar-2.png"
+    },
+    "certificate-azure":{
+        "title": "Sertifikat Nyawit",
+        "obtained": "20-12-1999",
+        "organization": "AntekAsing",
+        "organizationLogo": "/certif-logo.png",
+        "certificateImg":"/test-gambar.png"
+    }
+}
