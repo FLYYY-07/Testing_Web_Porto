@@ -6,6 +6,7 @@ import {
 } from "react-icons/go";
 import { AiFillGithub } from "react-icons/ai";
 import { FcOk } from "react-icons/fc"; 
+import Image from "next/image";
 
 export default function Header() {
   return (
@@ -14,7 +15,14 @@ export default function Header() {
       <aside className="w-64 bg-[#224 71.4% 4.1%] text-white p-6 flex flex-col justify-between">
         <div>
           {/* 1. Circle Photo dengan sedikit hiasan */}
-          <div className="w-30 h-30 bg-gray-600 rounded-full mb-1 border-2 border-gray-500 shadow-lg animate-bounce" style={{alignItems: 'center'}}></div>
+          <div className="relative w-30 h-30 overflow-hidden rounded-full mb-1 border-2 border-gray-500 shadow-lg animate-bounce" style={{alignItems: 'center'}}>
+            <Image src={`/f1-alonso.png`} alt={`test`}
+                fill
+                style={{
+                    objectFit:'cover'
+                }}
+            />
+          </div>
           <div style={{alignItems: 'left'}}></div>
           <span className="text-2xl font-bold mb-20 block">My Portfolio
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
