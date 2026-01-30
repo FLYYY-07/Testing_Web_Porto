@@ -18,6 +18,10 @@ interface GitHubResponse {
 export default async function GETGithub() {
   const username: string = "FLYYY-07";
   const token: string | undefined = process.env.GITHUB_TOKEN;
+  const today = new Date();
+  const todayString = today.toISOString();
+  today.setFullYear(today.getFullYear() - 1);
+  const fromString = today.toISOString();
 
   // 1. Guard clause: Check if token exists
   if (!token) {
@@ -33,9 +37,6 @@ export default async function GETGithub() {
           totalPullRequestContributions
           totalIssueContributions
           totalPullRequestReviewContributions
-          contributionCalendar {
-            totalContributions
-          }
         }
       }
     }
@@ -50,8 +51,11 @@ export default async function GETGithub() {
       },
       body: JSON.stringify({
         query,
-        variables: { username }
+        variables: { username },
+        from: fromString,
+        to: toString
       }),
+      cache:'no-store',
       // Next.js specific: Revalidate cache every hour
       next: { revalidate: 3600 } 
     });
