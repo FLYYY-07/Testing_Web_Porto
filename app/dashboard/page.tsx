@@ -13,7 +13,6 @@ export default function DashboardPage() {
     const fetchData = async () => {
       const result = await GETGithub();
       setData(result);
-      console.log("GitHub API Response:", result);
     };
     fetchData();
   }, []);
