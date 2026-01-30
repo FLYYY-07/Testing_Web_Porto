@@ -1,27 +1,68 @@
+// Define types for the GitHub Response
+interface GitHubResponse {
+  data: {
+    user: {
+      contributionsCollection: {
+        totalCommitContributions: number;
+        totalPullRequestContributions: number;
+        totalIssueContributions: number;
+        totalPullRequestReviewContributions: number;
+        contributionCalendar: {
+          totalContributions: number;
+        };
+      };
+    };
+  };
+}
+
 export default async function GETGithub() {
-  // Menggunakan username kamu: FLYYY-07
-  const username = "FLYYY-07"; 
-  
-  // Mengatur rentang waktu khusus tahun 2026 saja
-  const today = new Date();
-  const to = today.toISOString();
-  today.setFullYear(today.getFullYear() - 1);
-  const from = today.toISOString();
+  const username: string = "FLYYY-07";
+  const token: string | undefined = process.env.GITHUB_TOKEN;
 
+  // 1. Guard clause: Check if token exists
+  if (!token) {
+    console.error("GITHUB_TOKEN is missing in environment variables");
+    return null;
+  }
 
-  // Memastikan URL memanggil parameter yang sudah kita isi di atas
-  const url = `http://localhost:3000/_api/github?username=${username}&from=${from}&to=${to}`;
-  
+  const query = `
+    query($username: String!) {
+      user(login: $username) {
+        contributionsCollection {
+          totalCommitContributions
+          totalPullRequestContributions
+          totalIssueContributions
+          totalPullRequestReviewContributions
+          contributionCalendar {
+            totalContributions
+          }
+        }
+      }
+    }
+  `;
+
   try {
-    const res = await fetch(url, {
-      cache: 'no-store' // Memastikan data selalu fresh
+    const response = await fetch('https://api.github.com/graphql', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        query,
+        variables: { username }
+      }),
+      // Next.js specific: Revalidate cache every hour
+      next: { revalidate: 3600 } 
     });
-    
-    if (!res.ok) return null;
-    const result = await res.json();
-    return result;
+
+    const result: GitHubResponse = await response.json();
+
+    // 2. Return the actual data object
+    return result.data.user.contributionsCollection;
+
   } catch (error) {
-    console.error("Gagal mengambil data GitHub:", error);
+    console.error("Error fetching GitHub data:", error);
     return null;
   }
 }

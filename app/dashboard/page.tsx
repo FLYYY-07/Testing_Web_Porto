@@ -3,6 +3,7 @@ import GETGithub from '../_api/github/route';
 
 export default async function DashboardPage() {
   const data = await GETGithub();
+  console.log("GitHub API Response:", data);
 
   const infos = [
     { title: 'Total Commits', data: data?.totalCommitContributions ?? 0},
