@@ -2,7 +2,7 @@ import data from '@/data/projects.json'
 import Link from 'next/link';
 import Image from "next/image";
 import { notFound } from 'next/navigation'
-import { FaExternalLinkAlt, FaBackspace } from "react-icons/fa";
+import { FaExternalLinkAlt } from "react-icons/fa";
 import { IoArrowBackCircleSharp } from "react-icons/io5";
 
 export default async function Projects({ params } : { params : Promise<{ slug : string}>}){
@@ -57,7 +57,7 @@ export default async function Projects({ params } : { params : Promise<{ slug : 
             {/* nanti coba refactor */}
             <div className='flex flex-col gap-5 py-5 border-b-2 border-gray-200'>
                 <span className='font-semibold text-2xl'>Tech Stacks</span>
-                <p>'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                <p>lorem ipsum will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
                 <div className='px-15'>
                     <ul className='flex flex-col gap-3'>
                         {project.techStack.map((tech) => (
@@ -67,11 +67,11 @@ export default async function Projects({ params } : { params : Promise<{ slug : 
                         ))}
                     </ul>
                 </div>
-                <p>'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                <p>lorem ipsum will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
             </div>
             <div className='flex flex-col gap-5 py-5 border-b-2 border-gray-200'>
                 <span className='font-semibold text-2xl'>Features</span>
-                <p>'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                <p>lorem ipsum will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
                 <div className='px-15'>
                     <ul className='flex flex-col gap-3'>
                         {project.features.map((feat) => (
@@ -81,7 +81,7 @@ export default async function Projects({ params } : { params : Promise<{ slug : 
                         ))}
                     </ul>
                 </div>
-                <p>'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                <p>lorem ipsum will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
             </div>
             {/* sampe sini */}
             <div className='flex flex-col gap-5 py-5'>

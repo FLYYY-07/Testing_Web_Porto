@@ -5,7 +5,6 @@ import {
   GoMail
 } from "react-icons/go";
 import { AiFillGithub } from "react-icons/ai";
-import { FcOk } from "react-icons/fc"; 
 import Image from "next/image";
 
 export default function Header() {
