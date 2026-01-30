@@ -3,8 +3,11 @@ export default async function GETGithub() {
   const username = "FLYYY-07"; 
   
   // Mengatur rentang waktu khusus tahun 2026 saja
-  const from = "2026-01-01T00:00:00Z";
-  const to = "2026-12-31T23:59:59Z";
+  const today = new Date();
+  const to = today.toISOString();
+  today.setFullYear(today.getFullYear() - 1);
+  const from = today.toISOString();
+
 
   // Memastikan URL memanggil parameter yang sudah kita isi di atas
   const url = `http://localhost:3000/_api/github?username=${username}&from=${from}&to=${to}`;
