@@ -37,7 +37,6 @@ export default async function DashboardPage() {
         <div className="flex justify-center">
           <GitHubCalendar 
             username="FLYYY-07" 
-            year={2026} // Menampilkan grafik hanya tahun 2026
             theme={{
               dark: ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'],
             }}
