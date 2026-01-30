@@ -15,7 +15,12 @@ export default function AchivementCard(
     }
 ){
     return(
-        <div className="flex flex-row border-[0.5px] border-gray-950 bg-gray-950">
+        <div className="group flex flex-row border-[0.5px] border-gray-950 bg-gray-950
+            transition-transform
+            duration-500
+            ease-in-out
+            hover:scale-105
+        ">
             <div className="relative w-1/4 h-27 ">
                 <Image src={imgUrl} alt={`test`}
                     fill
@@ -23,12 +28,22 @@ export default function AchivementCard(
                         objectFit:'cover'
                     }}
                 />
-                <div className="absolute inset-0 bg-radial from-transparent via-gray-300/5 to-gray-950
+                <div className="absolute inset-0 bg-radial from-transparent via-gray-300/1 to-gray-950
                     transition-colors
                     duration-300
-                    ease-in-out
-                    group-hover:via-gray-900/90
-                "></div>
+                    ease-linear
+                    group-hover:bg-gray-950
+                    group-hover:opacity-85
+                ">
+                    <span className="size-full flex items-center justify-center text-gray-300 opacity-0
+                        transition-all
+                        duration-400
+                        ease-linear
+                        group-hover:opacity-100
+                    ">
+                        View Detail
+                    </span>
+                </div>
             </div>
             <div className="w-full h-inherit flex flex-row">
                 <div className="flex-1 flex flex-col px-8 py-5 justify-center">
