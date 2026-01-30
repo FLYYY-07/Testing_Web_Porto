@@ -29,7 +29,7 @@ export default async function DashboardPage() {
 
         {/* Bagian Grafik Kotak Hijau (Tahun 2026) */}
         <div className="bg-gray-950 p-2 rounded-xl border border-gray-800 overflow-hidden">
-          <p className="py-3 text-gray-200 text-sm text-center">Aktivitas Selama Setahun</p>
+          <p className="py-3 text-gray-200 text-sm text-center">Year-long activities</p>
           <div className="flex justify-center gap-2">
             <GitHubCalendar 
               username="FLYYY-07" 
