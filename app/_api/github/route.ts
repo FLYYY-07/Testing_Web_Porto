@@ -1,51 +1,24 @@
-import { NextResponse } from 'next/server';
-
-export async function GET(request: Request) {
-  const { searchParams } = new URL(request.url);
+export default async function GETGithub() {
+  // Menggunakan username kamu: FLYYY-07
+  const username = "FLYYY-07"; 
   
-  // PERBAIKAN: Menggunakan username kamu sendiri sebagai default
-  const username = searchParams.get('username') || "FLYYY-07"; 
+  // Mengatur rentang waktu khusus tahun 2026 saja
+  const from = "2026-01-01T00:00:00Z";
+  const to = "2026-12-31T23:59:59Z";
+
+  // Memastikan URL memanggil parameter yang sudah kita isi di atas
+  const url = `http://localhost:3000/_api/github?username=${username}&from=${from}&to=${to}`;
   
-  // PERBAIKAN: Menambahkan default range waktu agar tidak kosong (0)
-  const from = searchParams.get('from') || "2025-01-01T00:00:00Z"; 
-  const to = searchParams.get('to') || "2026-12-31T23:59:59Z";
-
-  const query = `
-    query($username: String!, $from: DateTime!, $to: DateTime!) {
-      user(login: $username) {
-        contributionsCollection(from: $from, to: $to) {
-          totalCommitContributions
-          totalIssueContributions
-          totalPullRequestContributions
-          totalPullRequestReviewContributions
-        }
-      }
-    }
-  `;
-
   try {
-    const response = await fetch('https://api.github.com/graphql', {
-      method: 'POST',
-      headers: {
-        // Mengambil GITHUB_TOKEN dari file .env.local kamu
-        Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        query,
-        variables: { username, from, to },
-      }),
+    const res = await fetch(url, {
+      cache: 'no-store' // Memastikan data selalu fresh
     });
-
-    const result = await response.json();
-
-    // Proteksi jika data user tidak ditemukan atau token bermasalah
-    if (!result.data || !result.data.user) {
-      return NextResponse.json({ error: "User not found or Invalid Token" }, { status: 404 });
-    }
-
-    return NextResponse.json(result.data.user.contributionsCollection);
+    
+    if (!res.ok) return null;
+    const result = await res.json();
+    return result;
   } catch (error) {
-    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
+    console.error("Gagal mengambil data GitHub:", error);
+    return null;
   }
 }

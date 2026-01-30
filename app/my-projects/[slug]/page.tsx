@@ -17,7 +17,7 @@ export default async function Projects({ params } : { params : Promise<{ slug : 
     return (
         <div className='w-full flex flex-col py-2 px-15'>
             <div className='w-full py-5 '>
-                <div className='group w-fit flex flex-row gap-3 items-center'>
+                <Link href={`/my-projects`} className='group w-fit flex flex-row gap-3 items-center'>
                     <IoArrowBackCircleSharp className='text-2xl'/> 
                     <span className='text-xl
                         transition-transform
@@ -25,7 +25,7 @@ export default async function Projects({ params } : { params : Promise<{ slug : 
                         ease-linear
                         group-hover:translate-x-2
                     '>Back</span>
-                </div>
+                </Link>
             </div>
             <div className='border-b-2 border-gray-100'>
                 <div className='flex flex-row'>

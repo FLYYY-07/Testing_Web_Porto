@@ -26,12 +26,12 @@ export default function ProjectCard(
                         objectFit: 'cover',
                     }}
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-gray-950 via-gray-500/40 to-transparent
+                <div className={`absolute inset-0 bg-linear-to-t from-gray-950 via-gray-500/40 to-transparent
                     transition-colors
                     duration-300
                     ease-in-out
                     group-hover:via-gray-900/90
-                ">
+                `}>
                     <span className="w-full h-full flex justify-center items-center opacity-0
                         transition-all
                         duration-300

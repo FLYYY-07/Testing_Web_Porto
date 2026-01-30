@@ -1,12 +1,10 @@
-import React from 'react';
-
 export default function About() {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="min-h-screen bg-linear-to-br from-slate-900 via-purple-900 to-slate-900">
             {/* Header Section */}
             <section className="relative pt-20 pb-32 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-6xl mx-auto">
-                    <h1 className="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 mb-6">
+                    <h1 className="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-purple-500 mb-6">
                         About Us
                     </h1>
                     <p className="text-xl text-gray-300 max-w-2xl">
@@ -36,12 +34,12 @@ export default function About() {
 
                     {/* Right Content - Visual Card */}
                     <div className="relative">
-                        <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg blur-xl opacity-30"></div>
-                        <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg p-8 border border-purple-500/30">
+                        <div className="absolute inset-0 bg-linear-to-r from-blue-500 to-purple-500 rounded-lg blur-xl opacity-30"></div>
+                        <div className="relative bg-linear-to-br from-gray-800 to-gray-900 rounded-lg p-8 border border-purple-500/30">
                             <div className="text-center">
                                 <div className="text-5xl font-bold text-blue-400 mb-2">10+</div>
                                 <p className="text-gray-300 mb-6">Years of Experience</p>
-                                <div className="h-1 w-16 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto mb-6"></div>
+                                <div className="h-1 w-16 bg-linear-to-r from-blue-400 to-purple-500 mx-auto mb-6"></div>
                                 <p className="text-gray-400">Trusted by hundreds of clients globally</p>
                             </div>
                         </div>

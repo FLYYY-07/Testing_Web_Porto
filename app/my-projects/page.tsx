@@ -15,7 +15,7 @@ export default function MyProjects(){
                         
                         return (
                         <React.Fragment key={i}>
-                            <ProjectCard 
+                            <ProjectCard
                                 url={`/my-projects/${i}`} 
                                 img={project.imgUrl[0]}
                                 title={project.name}
