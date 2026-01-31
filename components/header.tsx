@@ -14,7 +14,7 @@ export default function Header() {
       <aside className="w-64 bg-[#224 71.4% 4.1%] text-white p-6 flex flex-col justify-between">
         <div>
           {/* 1. Circle Photo dengan sedikit hiasan */}
-          <div className="relative w-30 h-30 overflow-hidden rounded-full mb-1 border-2 border-gray-500 shadow-lg animate-bounce" style={{alignItems: 'center'}}>
+          <div className="relative w-30 h-30 overflow-hidden rounded-full mb-1 border-2 border-gray-500 shadow-lg" style={{alignItems: 'center'}}>
             <Image src={`/f1-alonso.png`} alt={`test`}
                 fill
                 style={{
