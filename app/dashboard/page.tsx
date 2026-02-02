@@ -52,7 +52,7 @@ export default function DashboardPage() {
           transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
           className="bg-gray-950 p-2 rounded-xl border border-gray-800 overflow-hidden"
         >
-          <p className="py-3 text-gray-200 text-sm text-center">Year-long activities</p>
+          <p className="py-3 text-gray-200 text-sm text-center">Year-long activities let's goooooo</p>
           <div className="flex justify-center gap-2">
             <GitHubCalendar 
               username="FLYYY-07" 
