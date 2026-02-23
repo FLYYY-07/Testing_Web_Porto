@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Nav from "@/components/nav";
 import Header from "@/components/header";
+// Tambahkan import contact di sini
+// import ContactPage from "@/components/ContactPage";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,7 +15,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
 
   return (
     <html lang="en">
@@ -28,6 +29,7 @@ export default function RootLayout({
             <section className="w-full h-inherit flex flex-col px-3">
               <Nav/>
               {children}
+              {/* Tambahkan komponen Contact di sini agar muncul di bawah konten utama */}
             </section>
           </div>
         </div>

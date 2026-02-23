@@ -25,7 +25,7 @@ export default async function GETGithub() {
 
   // 1. Guard clause: Check if token exists
   if (!token) {
-    console.error("GITHUB_TOKEN is missing in environment variables");
+    console.error("GITHUB_TOKEN is not set in environment variables.");
     return null;
   }
 
